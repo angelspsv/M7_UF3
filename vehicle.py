@@ -3,10 +3,11 @@
 # Getters i Setters, mètode per mostrar totes les dades,
 # afegir el mètode to_dict(self) per retornar l'objecte
 # en format json
+import json
 class vehicle:
     def __init__(self, marca, modelo, any, color, vel_max, combustible):
         self.marca = marca
-        self.model = modelo
+        self.modelo = modelo
         self.any = any
         self.color = color
         self.vel_max = vel_max
@@ -59,4 +60,15 @@ class vehicle:
             'vel_max': self.vel_max,
             'combustible': self.combustible
         }
-
+    
+    # aquest mètode retorna l'objecte en format json
+    def to_dict(self):
+        atributs = {
+            "marca": self.marca,
+            "modelo": self.modelo,
+            "any": self.any,
+            "color": self.color,
+            "vel_max": self.vel_max,
+            "combustible": self.combustible
+        }
+        return json.dumps(atributs, indent=2)
