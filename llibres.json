@@ -1,0 +1,28 @@
+{
+  "book": [
+    {
+      "title": "Libro1",
+      "cover": "Dura",
+      "year": 2022,
+      "pages": 300
+    },
+    {
+      "title": "Libro2",
+      "cover": "Blanda",
+      "year": 2020,
+      "pages": 250
+    },
+    {
+      "title": "Libro3",
+      "cover": "Dura",
+      "year": 2021,
+      "pages": 400
+    },
+    {
+      "title": "Libro4",
+      "cover": "Blanda",
+      "year": 2019,
+      "pages": 180
+    }
+  ]
+}
