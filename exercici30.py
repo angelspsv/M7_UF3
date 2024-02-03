@@ -3,6 +3,3 @@
 def demanaNom():
     nom = input("Entra un nom: ")
     print(f'Hola {nom}!')
-
-#crida a la funció
-demanaNom()

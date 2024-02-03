@@ -23,6 +23,3 @@ def DemanarDosNumeros():
         NumerosEntreDosNums(num2, num1)
     else:
         print("Impossible, els dos números són el mateix")
-
-
-DemanarDosNumeros()
