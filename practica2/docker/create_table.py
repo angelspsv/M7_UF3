@@ -1,6 +1,9 @@
 # fitxer per crear la taula
 import psycopg2
-from conn import connection
+from connection import conn
+
+# per fer la connexio s'utilitza el metode cursor()
+connection = conn.cursor()
 
 sql = '''CREATE TABLE IF NOT EXISTS personas (
     id SERIAL PRIMARY KEY,
@@ -11,3 +14,13 @@ sql = '''CREATE TABLE IF NOT EXISTS personas (
     movil VARCHAR(15)
 );
 '''
+
+# Amb el mètode execute() s'envia la query
+connection.execute(sql)
+
+# Commit per fer efectius els canvis de la query a la BD
+conn.commit()
+
+print("Taula creada")
+
+conn.close()
