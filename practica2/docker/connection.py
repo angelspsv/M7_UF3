@@ -3,7 +3,7 @@ import psycopg2
 
 # dades agafades des del fitxer .yml per la connexio a la bbdd
 conn = psycopg2.connect(
-    database='bbdd',
+    database='postgres',
     user='admin',
     password='admin',
     host='localhost',
