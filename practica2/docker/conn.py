@@ -1,5 +1,4 @@
 # fitxer per la connexio a la bbdd
-from multiprocessing import connection
 import psycopg2
 
 # dades agafades des del fitxer .yml per la connexio a la bbdd
