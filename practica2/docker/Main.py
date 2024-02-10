@@ -2,11 +2,11 @@
 # des d'aqui es gestionaran les peticions del client
 import psycopg2
 from psycopg2 import Error
-from connection import connection
-from create.py import create_modul
-from read.py import read_modul
-from update.py import update_modul
-from delete.py import delete_modul
+from connection import *
+import create
+import read
+import update
+import delete
 
 
 def main():
@@ -16,10 +16,29 @@ def main():
         return
 
     try:
+        # demanar les dades de l'usuari des de la consola
+        print("Dades de l\'usuari per realitzar una nova entrada a la base de dades: ")
+        nom = input("Entra el teu nom: ")
+        cognom = input("Entra el teu nom: ")
+        edat = int(input("Entra la teva edat: "))
+        email = input("Entra el teu correu: ")
+        movil = input("Entra el teu móvil: ")
+
+        # amb les dades de l'usuari faig un diccionari 
+        data = {
+            "nombre": nom,
+            "apellido": cognom,
+            "edad": edat,
+            "email": email,
+            "movil": movil
+        }
 
         # fer les crides de CRUD
         data = "" #dades a inserir
-        create_modul(connection, data)
+        create.create_modul(connection, data)
+        read.read_modul()
+        update.update_modul()
+        delete.delete_modul()
 
     except Error as e:
         print("Error: ", e)
