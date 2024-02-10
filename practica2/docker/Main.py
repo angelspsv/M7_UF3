@@ -3,10 +3,10 @@
 import psycopg2
 from psycopg2 import Error
 from connection import connection
-from create.py import create_mod
-from read.py import read_mod
-from update.py import update_mod
-from delete.py import delete_mod
+from create.py import create_modul
+from read.py import read_modul
+from update.py import update_modul
+from delete.py import delete_modul
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
 
         # fer les crides de CRUD
         data = "" #dades a inserir
-        create_mod(connection, data)
+        create_modul(connection, data)
 
     except Error as e:
         print("Error: ", e)

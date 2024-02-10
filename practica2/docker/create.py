@@ -2,7 +2,7 @@
 import psycopg2
 from connection import *
 
-def create_mod():
+def create_modul():
         
     # Consulta SQL para insertar un nuevo registro en la tabla personas
     insert_query = '''
@@ -17,4 +17,4 @@ def create_mod():
         
     print("Registre creat correctament")
 
-create_mod()
+create_modul()
