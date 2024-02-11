@@ -13,4 +13,5 @@ conn = psycopg2.connect(
 # per fer la connexio s'utilitza el metode cursor()
 connection = conn.cursor()
 
-print(connection)
+# print que retorna un objecte i confirma que la connexió s'ha fet correctament
+# print(connection)
