@@ -28,6 +28,7 @@ def main():
         new_movil_value = input("Entra el nou número de móvil: ")
         update.update_modul(new_movil_value)
         
+        # esborrar el darrer registre de la taula
         delete.delete_modul()
 
     except Error as e:
