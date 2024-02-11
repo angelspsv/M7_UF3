@@ -27,8 +27,3 @@ def update_modul(new_movil):
 
     print("Darrer registre actualitzat correctament.")
 
-
-
-# demanar el nou número de móvil i executar la funció amb la dada
-new_movil_value = input("Entra el nou número de móvil: ")
-update_modul(new_movil_value)
