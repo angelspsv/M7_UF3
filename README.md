@@ -5,7 +5,8 @@ Imatges de la pràctica2 (CRUD) de Postgres:
 
 ![execucio fitxer Main.py](execucio_main.jpg)
 
-
 - execució del Main.py sense el delete.py per veure el registre del insert a la taula personas
 
 ![execucio fitxer Main.py](tabla_personas.jpg)
+
+* Hi ha més imatges del codi al directori de la pràctica "practica2".
