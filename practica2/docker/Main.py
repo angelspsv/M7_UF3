@@ -7,37 +7,27 @@ import create
 import read
 import update
 import delete
+import create_table
 
 
 def main():
-    # obtenir la connexió des de conn.py
+    # obtenir la connexió des de connection.py
     if not connection:
         print("No es pot establir la connexió a la bbdd")
         return
 
     try:
-        # demanar les dades de l'usuari des de la consola
-        print("Dades de l\'usuari per realitzar una nova entrada a la base de dades: ")
-        nom = input("Entra el teu nom: ")
-        cognom = input("Entra el teu nom: ")
-        edat = int(input("Entra la teva edat: "))
-        email = input("Entra el teu correu: ")
-        movil = input("Entra el teu móvil: ")
-
-        # amb les dades de l'usuari faig un diccionari 
-        data = {
-            "nombre": nom,
-            "apellido": cognom,
-            "edad": edat,
-            "email": email,
-            "movil": movil
-        }
+        # creació de la taula personas si no existeix
+        create_table.create_table_modul()
 
         # fer les crides de CRUD
-        data = "" #dades a inserir
-        create.create_modul(connection, data)
+        create.create_modul()
         read.read_modul()
-        update.update_modul()
+
+        # demanar el nou número de móvil i executar la funció amb la dada
+        new_movil_value = input("Entra el nou número de móvil: ")
+        update.update_modul(new_movil_value)
+        
         delete.delete_modul()
 
     except Error as e:
