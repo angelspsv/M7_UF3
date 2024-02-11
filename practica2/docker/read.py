@@ -6,7 +6,7 @@ def read_modul():
 
     # consulta SQL per agafar el darrer insert de la taula personas
     select_query = '''
-            SELECT * FROM public.personas ORDER BY id DESC LIMIT 1
+        SELECT * FROM public.personas ORDER BY id DESC LIMIT 1
     '''
 
     # s'executeix la consulta SQL
@@ -23,6 +23,3 @@ def read_modul():
     else:
         print("No hi ha registres a la taula personas.")
 
-
-
-read_modul()
