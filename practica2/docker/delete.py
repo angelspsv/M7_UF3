@@ -26,8 +26,3 @@ def delete_modul():
     conn.commit()
 
     print("Últim registre esborrat correctament.")
-
-
-
-
-delete_modul()
