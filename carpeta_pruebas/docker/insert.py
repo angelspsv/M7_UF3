@@ -35,3 +35,5 @@ def insert_modul():
     except psycopg2.Error as error:
         # solamente se verá si se produce un error
         print("Error en la entrada de datos en la tabla de trabajadores.")
+
+

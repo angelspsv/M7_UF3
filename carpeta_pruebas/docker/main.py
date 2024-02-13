@@ -5,6 +5,7 @@ from connection import *
 import insert
 import read
 import update
+import delete
 
 def main_modul():
     #comprobamos la conexión
@@ -26,7 +27,7 @@ def main_modul():
         update.update_modul()
 
         # eliminar la última entrada disponible en la tabla 
-
+        delete.delete_modul()
 
 
     except psycopg2.Error as e:

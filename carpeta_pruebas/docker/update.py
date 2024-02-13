@@ -21,7 +21,8 @@ def update_modul():
             UPDATE public.trabajadores SET email = %s WHERE id = %s
         '''
 
-        # los datos para la consulta: el nuevo email y la id del trabajador X
+        # los datos para la consulta: el nuevo email y la id del trabajador X 
+        # se almacenan en una tupla
         values = (new_mail, respuesta_id)
 
         # ejecutamos la query y actualizamos el correo
