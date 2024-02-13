@@ -30,5 +30,3 @@ except (Exception, psycopg2.Error) as error:
     # mensaje de error si sale alguno durante el proceso de creación
     print("Error al crear la tabla de trabakadores: ", error)
 
-
-crear_taula_modul()

@@ -2,6 +2,9 @@
 import psycopg2
 import crear_taula_trabajador
 from connection import *
+import insert
+import read
+import update
 
 def main_modul():
     #comprobamos la conexión
@@ -14,6 +17,16 @@ def main_modul():
         crear_taula_trabajador.crear_taula_modul()
 
         # hacemos un insert a la tabla
+        insert.insert_modul()
+
+        # consultamos la última entrada en la tabla
+        read.read_modul()
+        
+        # modificaremos el valor de la columna email
+        update.update_modul()
+
+        # eliminar la última entrada disponible en la tabla 
+
 
 
     except psycopg2.Error as e:
@@ -29,4 +42,4 @@ def main_modul():
 
 
 # cridem la funció 
-main()
+main_modul()
