@@ -9,10 +9,10 @@ def read_modul():
         SELECT * FROM public.personas ORDER BY id DESC LIMIT 1
     '''
 
-    # s'executeix la consulta SQL
+    # executem la consulta SQL
     connection.execute(select_query)
 
-    # el resultat de la consulta SQL
+    # agafem el resultat de la consulta SQL
     resultat = connection.fetchall()
 
     # mostra les dades del darrer insert
