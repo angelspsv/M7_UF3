@@ -10,7 +10,7 @@ conn = psycopg2.connect(
     port='5432'
 )
 
-# per fer la connexio s'utilitza el metode cursor()
+# per fer la connexio s'utilitza el metode cursor() per crear un objecte cursor
 connection = conn.cursor()
 
 # print que retorna un objecte i confirma que la connexió s'ha fet correctament
