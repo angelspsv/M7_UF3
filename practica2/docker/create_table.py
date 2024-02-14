@@ -3,7 +3,7 @@ import psycopg2
 from connection import *
 
 def create_table_modul():
-    # per fer la connexio s'utilitza el metode cursor()
+    # per fer la connexio s'utilitza el mètode cursor()
 
     sql = '''CREATE TABLE IF NOT EXISTS personas (
         id SERIAL PRIMARY KEY,
@@ -18,7 +18,7 @@ def create_table_modul():
     # Amb el mètode execute() s'envia la query
     connection.execute(sql)
 
-    # Commit per fer efectius els canvis de la query a la BD
+    # Commit desar els canvis realitzats de la query a la taula/BD
     conn.commit()
 
     print("Taula creada")
