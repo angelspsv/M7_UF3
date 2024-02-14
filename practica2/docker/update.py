@@ -10,19 +10,21 @@ def update_modul(new_movil):
     '''
     # execució de la consulta SQL
     connection.execute(id_query)
+
+    # agafem el resultat de la query
     last_id = connection.fetchone()[0]
 
     # consulta SQL per actualitzar el valor de la columna movil
     update_query = '''
         UPDATE public.personas SET movil = %s WHERE id = %s
     '''
-    # dades: l'id del registre que es vol actualitzar i el nou num de móvil
+    # dades: l'id del registre que es vol actualitzar i el nou número de móvil
     values = (new_movil, last_id)
         
     # execució de la query per actualitzar el camp movil del darrer registre
     connection.execute(update_query, values)
 
-    # Commit per desar els canvis a la BD
+    # Commit per desar els canvis a la taula/BD
     conn.commit()
 
     print("Darrer registre actualitzat correctament.")
