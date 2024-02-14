@@ -6,11 +6,11 @@ def create_modul():
 
     # demanar les dades de l'usuari des de la consola
     print("Dades de l\'usuari per realitzar una nova entrada a la base de dades: ")
-    nom = input("Entra el teu nom: ")
-    cognom = input("Entra el teu cognom: ")
-    edat = int(input("Entra la teva edat: "))
-    email = input("Entra el teu correu: ")
-    movil = input("Entra el teu móvil: ")
+    nom = input("Entra el nom: ")
+    cognom = input("Entra el cognom: ")
+    edat = int(input("Entra l'edat: "))
+    email = input("Entra el correu: ")
+    movil = input("Entra el móvil: ")
         
     # Consulta SQL para insertar un nuevo registro en la tabla personas
     insert_query = '''
